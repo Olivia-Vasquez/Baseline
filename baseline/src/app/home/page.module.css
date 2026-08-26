@@ -1,8 +1,8 @@
 .page {
   --background: #fafafa;
   --foreground: #fff;
-  --section: #ededed;
-  --subsection: #cac9c9;
+  --section: #656565;
+  --subsection2: #898989;
 
   --text-primary: #000;
   --text-secondary: #666;
@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: row;
   min-width: 40px;
-  background-color: var(--subsection);
+  background-color: var(--subsection2);
   border-radius: 5px;
   padding: 0.01em 60px;
   margin: 40px 0;

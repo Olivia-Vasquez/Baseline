@@ -21,27 +21,32 @@ export default function Home() {
         </div>
         <div className={styles.section}>
           <h1>
+            Readiness Score
+          </h1>
+        </div>
+        <div className={styles.section}>
+          <h1>
             Today
           </h1>
           <div className={styles.subsection1}>
             <div className={styles.subsection2}>
               <h1>
-                Step Count
+                Steps
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Running
+                Move
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Cycling
+                Rest
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Swimming
+                Breath
               </h1>
             </div>
           </div>
@@ -56,22 +61,22 @@ export default function Home() {
           <div className={styles.subsection1}>
             <div className={styles.subsection2}>
               <h1>
-                Step Count
+                Steps
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Running
+                Move
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Cycling
+                Rest
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Swimming
+                Breath
               </h1>
             </div>
           </div>
@@ -83,22 +88,22 @@ export default function Home() {
           <div className={styles.subsection1}>
             <div className={styles.subsection2}>
               <h1>
-                Step Count
+                Steps
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Running
+                Sleep
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Cycling
+                Move
               </h1>
             </div>
             <div className={styles.subsection2}>
               <h1>
-                Swimming
+                Breath
               </h1>
             </div>
           </div>
