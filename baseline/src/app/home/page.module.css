@@ -5,7 +5,8 @@
   --subsection2: #898989;
 
   --text-primary: #000;
-  --text-secondary: #666;
+  --text-secondary: #666666;
+  --text-score: #c0dcfd;
 
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
@@ -101,13 +102,32 @@
 }
 .subsection2 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
   min-width: 40px;
   background-color: var(--subsection2);
   border-radius: 5px;
   padding: 0.01em 60px;
   margin: 40px 0;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+.subsection2 h1 {
+  max-width: 320px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  text-wrap: balance;
+  color: var(--text-secondary);
+}
+.subsection2 p {
+  max-width: 320px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -2.4px;
+  text-wrap: balance;
+  color: var(--text-score);
 }
 
 .ctas {

@@ -21,7 +21,7 @@ export const demoMetrics: DailyMetrics[] = [
         date: "2026-07-29",
         steps: 10245,
         moveCalories: 560,
-        restMinutes: 4921,
+        restMinutes: 492,
         breatheMinutes: 6,
         readinessScore: 65,
     }

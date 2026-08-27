@@ -4,7 +4,7 @@ import { demoMetrics } from "@/data/demoMetrics";
 
 export default function Home() {
   const today = demoMetrics[demoMetrics.length - 1];
-  
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -26,6 +26,9 @@ export default function Home() {
           <h1>
             Readiness Score
           </h1>
+          <p>
+            {today.readinessScore}
+          </p>
         </div>
         <div className={styles.section}>
           <h1>
@@ -36,21 +39,33 @@ export default function Home() {
               <h1>
                 Steps
               </h1>
+              <p>
+                {today.steps}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Move
               </h1>
+              <p>
+                {today.moveCalories}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Rest
               </h1>
+              <p>
+                {today.restMinutes}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Breath
               </h1>
+              <p>
+                {today.breatheMinutes}
+              </p>
             </div>
           </div>
 
