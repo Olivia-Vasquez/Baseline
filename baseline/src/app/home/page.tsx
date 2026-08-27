@@ -28,9 +28,6 @@ export default function Home() {
             Readiness Score
           </h1>
           <ReadinessGauge score={today.readinessScore}/>
-          <p>
-            {today.readinessScore}
-          </p>
         </div>
         <div className={styles.section}>
           <h1>

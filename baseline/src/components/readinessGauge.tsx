@@ -2,7 +2,7 @@ type ReadinessGaugeProps = {
   score: number;
 };
 
-export const ReadinessGauge = ({ score }: ReadinessGaugeProps) => {
+export const ReadinessGauge = ({score}: ReadinessGaugeProps) => {
   return (
     <svg 
       fill="none"
@@ -22,9 +22,20 @@ export const ReadinessGauge = ({ score }: ReadinessGaugeProps) => {
         fill="none"
         strokeWidth="14"
         strokeLinecap="round"
-        stroke="blue"
+        stroke="lightblue"
         pathLength="100"
-        strokeDasharray="{score[score.length -1]} 100"/>
-    </svg>
+        strokeDasharray={score + " 100"}/>    
+
+      <text
+        x="100"
+        y="85"
+        textAnchor="middle"
+        fill="currentColor"
+        fontSize="30"
+        fontWeight="600"
+      >
+        {score}
+      </text>
+      </svg>
   );
 };
