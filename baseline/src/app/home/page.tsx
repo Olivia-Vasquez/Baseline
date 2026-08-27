@@ -1,7 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { demoMetrics } from "@/data/demoMetrics";
 
 export default function Home() {
+  const today = demoMetrics[demoMetrics.length - 1];
+  
   return (
     <div className={styles.page}>
       <main className={styles.main}>
