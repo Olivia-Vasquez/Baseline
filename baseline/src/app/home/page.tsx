@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { demoMetrics } from "@/data/demoMetrics";
+import { ReadinessGauge } from "@/components/readinessGauge";
 
 export default function Home() {
   const today = demoMetrics[demoMetrics.length - 1];
@@ -26,6 +27,7 @@ export default function Home() {
           <h1>
             Readiness Score
           </h1>
+          <ReadinessGauge score={today.readinessScore}/>
           <p>
             {today.readinessScore}
           </p>
