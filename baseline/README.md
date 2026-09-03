@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Baseline
 
-## Getting Started
+Baseline is a personal recovery and activity dashboard built around a simple idea: health data is more useful when it is compared with your own patterns instead of only generic daily targets.
 
-First, run the development server:
+The project is currently an early frontend prototype. It uses seeded demonstration data while I develop the interface, calculations, and data model.
+
+## Current Features
+
+Baseline currently displays:
+
+* A readiness score using a semicircular gauge
+* Steps
+* Move calories
+* Rest
+* Mindful breathing minutes
+
+The dashboard organizes these metrics into three sections:
+
+* **Today** shows the most recent entry.
+* **Trends** shows the average across the available data.
+* **Changes** shows the difference between the latest and previous entries.
+
+The readiness score is currently included in the demonstration data rather than calculated by the application. A transparent scoring model will be added later.
+
+## Built With
+
+* Next.js
+* React
+* TypeScript
+* CSS Modules
+* Inline SVG
+* Node.js and npm for local development
+
+## Running the Project Locally
+
+From the project directory, install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local address shown in the terminal in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Baseline is still in active development. The current version focuses on establishing the dashboard layout, reusable components, responsive styling, and basic metric calculations before introducing a backend.
 
-## Learn More
+All health and activity information currently shown in the application is temporary demonstration data.
 
-To learn more about Next.js, take a look at the following resources:
+## Planned Work
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Handle empty and incomplete datasets
+* Add loading and error states
+* Develop a transparent readiness-score calculation
+* Serve demonstration data through an API
+* Add automated tests for metric calculations
+* Store data using PostgreSQL and Prisma
+* Add one real activity-data integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Why I’m Building It
 
-## Deploy on Vercel
+My professional background is primarily in C# and .NET development. I started Baseline to build practical experience with React, TypeScript, Next.js, and Node.js while working on a problem I genuinely care about.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is also an exploration of how recovery and activity products can make personal data easier to understand without presenting opaque recommendations or treating the same target as appropriate for everyone.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Disclaimer
+
+Baseline is a personal software project and is not a medical device. It does not provide medical advice, diagnosis, or treatment recommendations.
