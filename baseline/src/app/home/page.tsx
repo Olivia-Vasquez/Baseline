@@ -1,10 +1,15 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { demoMetrics } from "@/data/demoMetrics";
+import { Averages, Changes } from "@/types/metrics";
+import { demoMetrics} from "@/data/demoMetrics";
 import { ReadinessGauge } from "@/components/readinessGauge";
+import { calculateAverage, calculateChange } from "@/lib/metricCalculations";
+import { MetricCard } from "@/components/MetricCard";
 
 export default function Home() {
   const today = demoMetrics[demoMetrics.length - 1];
+  const trends:Averages = calculateAverage(demoMetrics);
+  const changes:Changes = calculateChange(trends, today);
 
   return (
     <div className={styles.page}>
@@ -21,8 +26,8 @@ export default function Home() {
           <p>
             Home
           </p>
-          
         </div>
+
         <div className={styles.section}>
           <h1>
             Readiness Score
@@ -34,14 +39,8 @@ export default function Home() {
             Today
           </h1>
           <div className={styles.subsection1}>
-            <div className={styles.subsection2}>
-              <h1>
-                Steps
-              </h1>
-              <p>
-                {today.steps}
-              </p>
-            </div>
+              <MetricCard value={today.steps} label="Steps" />
+              <MetricCard value={today.moveCalories} label="Move"/>
             <div className={styles.subsection2}>
               <h1>
                 Move
@@ -80,25 +79,37 @@ export default function Home() {
               <h1>
                 Steps
               </h1>
+              <p>
+                {trends.steps}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Move
               </h1>
+              <p>
+                {trends.moveCalories}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Rest
               </h1>
+              <p>
+                {trends.restMinutes}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Breath
               </h1>
+              <p>
+                {trends.breatheMinutes}
+              </p>
             </div>
           </div>
         </div>
-                <div className={styles.section}>
+        <div className={styles.section}>
           <h1>
             Changes
           </h1>
@@ -107,21 +118,33 @@ export default function Home() {
               <h1>
                 Steps
               </h1>
+              <p>
+                {changes.steps}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Sleep
               </h1>
+              <p>
+                {changes.restMinutes}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Move
               </h1>
+              <p>
+                {changes.moveCalories}
+              </p>
             </div>
             <div className={styles.subsection2}>
               <h1>
                 Breath
               </h1>
+              <p>
+                {changes.breatheMinutes}
+              </p>
             </div>
           </div>
         </div>
